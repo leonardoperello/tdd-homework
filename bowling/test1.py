@@ -11,7 +11,7 @@ def test_all_ones():
 def test_spare():
         result = play_bowling(current_score = 0, rolls = 1, pins = 2)
         # cuando se tiran todos los pinos en 2 intento, se suma
-        # al score 1 
+        # al score **proximoTiro**
         # la cantidad de pinos tirados en la
         # 1er oportunidad del tiro extra
         result = play_bowling(current_score = result, rolls = 1, pins = 8)
