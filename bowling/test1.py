@@ -23,6 +23,8 @@ def test_spare():
         assert result == 48
 
 def test_strike():
+    # cuando hago un strike me suma al 1er turno lo que tiro en el siguiente
+    # y en el 2do turno me da como resultado lo del primero mas lo que tire en el 2do
     result = play_bowling(current_score = 0, rolls = 1, pins = 10)
     result = play_bowling(current_score = result, rolls = 2, pins = 2)
-    assert result == 10
+    assert result == 14
