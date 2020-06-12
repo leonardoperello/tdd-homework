@@ -15,12 +15,9 @@ def test_spare():
         # la cantidad de pinos tirados en la
         # 1er oportunidad del tiro extra
         result = play_bowling(current_score = result, rolls = 1, pins = 8)
-        proximoTiro = 2
-        if proximoTiro!=10:
-            result = play_bowling(current_score = result+proximoTiro, rolls = 18, pins = proximoTiro)
-        else:
-            result = play_bowling(current_score = result, rolls = 18, pins = proximoTiro)
-        assert result == 48
+        proximoTiro = 1
+        result = play_bowling(current_score = result+proximoTiro, rolls = 18, pins = proximoTiro)
+        assert result == 29
 
 def test_strike():
     # cuando hago un strike me suma al 1er turno lo que tiro en el siguiente
