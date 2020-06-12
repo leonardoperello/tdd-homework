@@ -1,4 +1,4 @@
-from funcion1 import play_bowling
+from funciones import play_bowling
 
 def test_all_gutter():
     result = play_bowling(current_score = 0,  rolls = 20, pins = 0)
@@ -21,3 +21,8 @@ def test_spare():
         else:
             result = play_bowling(current_score = result, rolls = 18, pins = proximoTiro)
         assert result == 48
+
+def test_strike():
+    result = play_bowling(current_score = 0, rolls = 1, pins = 10)
+    result = play_bowling(current_score = result, rolls = 2, pins = 2)
+    assert result == 10
