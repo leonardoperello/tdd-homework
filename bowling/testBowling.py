@@ -8,5 +8,5 @@ def testStrike():
 
 def testSpare():
     Game.roll(Game, 5)
-    Game.roll(Game, 4)
+    Game.roll(Game, 5)
     assert Game.spare(Game, 1) == True
