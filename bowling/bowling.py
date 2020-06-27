@@ -1,18 +1,21 @@
 
-class Game():
+class Game:
+    # rolls deberia tener entre 20 y 22 elementos
+    # y cada posicion deberia tener el numero de pinos que se tiraron en ese turno
+    current_score = 0
+    totalPins = 10
+    rolls = []
 
-    def play_bowling(self, current_score, rolls, pins):
-        return current_score + rolls * pins 
-
-# If in two tries he knocks them all down, this is called a “spare” and
-# his score for the frame is ten plus the number of pins knocked down on his next 
-# throw (in his next turn).
-    def spare(self, current_score, rolls, pins):
-        if(rolls == 2 & pins == 10):
+    def roll(self, pins):
+        self.rolls.append(pins)
+            
+    def spare(self, roll_):
+        if(self.rolls[roll_] + self.rolls[roll_ + 1] == self.totalPins):
             return True
 
-    def strike(self, current_score, rolls, pins):
-        if(rolls == 1 & pins == 10):
-            return True
+    def strike(self, roll_):
+        #if(self.rolls[roll_] == self.totalPins):
+        #    return True
+        return self.rolls[roll_]
 
     
