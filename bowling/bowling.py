@@ -10,7 +10,7 @@ class Game:
         self.rolls.append(pins)
         #metodo spare
     def spare(self, roll_):
-        if(self.rolls[roll_] + self.rolls[roll_] == self.totalPins): #le borro el +1 al segundo  self.rolls[roll_ + 1] 
+        if(self.rolls[roll_] + self.rolls[roll_+1] == self.totalPins): 
             return True
 
     def strike(self, roll_):
