@@ -1,4 +1,8 @@
+
+
 from bowling import Game
 
+    
 def testStrike():
-   assert Game.strike(None, 1)
+    Game.roll(None,10)
+    assert Game.strike(None, 0) == True 
