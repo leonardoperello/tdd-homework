@@ -33,5 +33,18 @@ class Game:
     def puntajePerfecto(self):
         return(self.current_score==300)
 
-
+    def scoreFinal(self):
+        #actualRoll = 0
+        current_score = 0
+        for actualRoll in range(9):
+            if(self.strike(actualRoll)):
+                current_score += 10 + self.rolls[actualRoll+1] + self.rolls[actualRoll+2]
+                actualRoll += 1
+            elif (self.rolls[actualRoll] + self.rolls[actualRoll+1] == self.totalPins):
+                current_score += 10 + self.rolls[actualRoll+2]
+                actualRoll += 2
+            else:
+                current_score += self.rolls[actualRoll] + self.rolls[actualRoll+1]
+                actualRoll += 2
+        return current_score
     
