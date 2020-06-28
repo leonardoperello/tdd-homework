@@ -7,13 +7,17 @@ Aca vamos a escribir el informe del trabajo
 
 Instrucciones para correr el proyecto.
 
-Nosotros estamos utilizando Pytest por lo que para probar los casos de test
+En este caso se está utilizando Pytest por lo que para probar los casos de test
 es necesario instalarlo en caso de no tenerlo ya, con el siguiente comando:
+
 pip install -U pytest
-Luego para verificar que se instalo correctamente ejecutar 
+
+Luego para verificar que se instaló correctamente ejecutar
+
 pytest --version
 
 Para correr el programa se hace de la siguiente manera:
+
 pytest test1.py o pytest -b test1.py para una ejecución mas detallada.
 
 
