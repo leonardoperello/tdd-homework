@@ -10,3 +10,6 @@ def testSpare():
     Game.roll(Game, 5)
     Game.roll(Game, 10)
     assert Game.spare(Game, 1) == True
+
+def testPuntajePerfecto():
+    assert (Game.puntajePerfecto(Game)== True)
