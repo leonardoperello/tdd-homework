@@ -26,24 +26,19 @@ def testScore():
     Game.muchos_rolls(Game, 10, 12)
     assert (Game.scoreFinal(Game)==300)
 '''
-#def testUnos():
-#        Game.muchos_rolls(Game, 1, 20)
-#        assert Game.scoreFinal(Game) == 20
-
+def testUnos():
+        Game.muchos_rolls(Game, 1, 20)
+        assert Game.scoreFinal(Game) == 1
+'''
 def test_muchos_strikes():
     Game.roll(Game, 10)
     Game.roll(Game, 7)
     Game.roll(Game, 3)
-    Game.muchos_rolls(Game, 1, 10)
+    Game.muchos_rolls(Game, 1, 17)
     assert Game.scoreFinal(Game) == 47
 
-#def test_another():
- #   Game.roll(Game, 2)
-  #  Game.roll(Game, 8)
-   # Game.roll(Game, 3)
-    #Game.muchos_rolls(Game, 0, 17)
-    #Game.scoreFinal(Game) == 0
 
-#def testPuntajePerfecto():
-#    Game.muchos_rolls(Game, 10, 12)
-#    assert (Game.scoreFinal(Game)==300)
+def testPuntajePerfecto():
+    Game.muchos_rolls(Game, 10, 12)
+    assert (Game.scoreFinal(Game)==300)
+'''
