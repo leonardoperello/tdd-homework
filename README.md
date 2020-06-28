@@ -18,7 +18,7 @@ pytest --version
 
 Para correr el programa se hace de la siguiente manera:
 
-pytest test1.py o pytest -b test1.py para una ejecución mas detallada.
+pytest test1.py o pytest -q test1.py para una ejecución mas detallada.
 
 
 Ejemplo de un ciclo de TDD (Red/Green/Refactor) para alguna de las funciones implementadas.
