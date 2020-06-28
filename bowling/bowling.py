@@ -10,8 +10,7 @@ class Game:
         self.rolls.append(pins)
         #metodo spare
     def spare(self, roll_):
-        if(self.rolls[roll_] + self.rolls[roll_+1] == self.totalPins): 
-            return True
+        return(self.rolls[roll_] + self.rolls[roll_+1] == self.totalPins)
 
     def strike(self, roll_):
         #if(self.rolls[roll_] == self.totalPins):
