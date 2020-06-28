@@ -18,9 +18,11 @@ class Game:
         #if(self.rolls[roll_] == self.totalPins):
         #    return True
         return self.rolls[roll_] == 10
+
+    def pinsEnPosicion(self, roll_):
+        return self.rolls[roll_]
     
    
-
     def muchos_rolls(self, pins, num):
         for i in range(num):
             Game.roll(self, pins)
