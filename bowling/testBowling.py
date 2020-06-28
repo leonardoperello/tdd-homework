@@ -10,7 +10,9 @@ def testSpare():
     assert Game.spare(Game, 1)
 
 def testPuntajePerfecto():
-    assert (Game.puntajePerfecto(Game) == False)
+    Game.muchos_rolls(Game, 10, 12)
+    Game.scoreFinal
+    assert (Game.puntajePerfecto(Game) == True)
 
 def test_gutter_game():
     Game.muchos_rolls(Game, 0, 20)
