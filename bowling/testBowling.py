@@ -12,7 +12,7 @@ from bowling import Game
 
 def testPuntajePerfecto():
     Game.muchos_rolls(Game, 10, 12)
-    assert (Game.scoreFinal(Game) == 298)
+    assert (Game.scoreFinal(Game) == 300)
 
 #def test_gutter_game():
 #    Game.muchos_rolls(Game, 0, 20)
