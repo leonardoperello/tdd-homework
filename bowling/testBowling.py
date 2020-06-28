@@ -2,9 +2,9 @@
 
 from bowling import Game
 
-def muchos_rolls(pins, num):
-    for i in range(num):
-        Game.roll(Game, pins)
+#def muchos_rolls(pins, num):
+  #  for i in range(num):
+   #     Game.roll(Game, pins)
 
 #def testStrike():
  #   Game.roll(Game, 10)
@@ -16,5 +16,5 @@ def muchos_rolls(pins, num):
  #   assert Game.spare(Game, 1) == True
 
 def test_gutter_game():
-    muchos_rolls(0, 20)
-    assert Game.strike(Game, 20) == 0
+    Game.muchos_rolls(Game, 10, 20)
+    assert Game.strike(Game, 19)

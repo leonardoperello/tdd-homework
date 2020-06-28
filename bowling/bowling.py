@@ -8,7 +8,8 @@ class Game:
 
     def roll(self, pins):
         self.rolls.append(pins)
-        #metodo spare
+
+    #metodo spare
     def spare(self, roll_):
         if(self.rolls[roll_] + self.rolls[roll_+1] == self.totalPins): 
             return True
@@ -16,6 +17,12 @@ class Game:
     def strike(self, roll_):
         #if(self.rolls[roll_] == self.totalPins):
         #    return True
-        return self.rolls[roll_]
+        return self.rolls[roll_] == 10
+    
+   
+
+    def muchos_rolls(self, pins, num):
+        for i in range(num):
+            Game.roll(self, pins)
 
     
