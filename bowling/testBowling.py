@@ -26,9 +26,16 @@ def testScore():
     Game.muchos_rolls(Game, 10, 12)
     assert (Game.scoreFinal(Game)==300)
 '''
-def testUnos():
-        Game.muchos_rolls(Game, 1, 20)
-        assert Game.scoreFinal(Game) == 20
+#def testUnos():
+#        Game.muchos_rolls(Game, 1, 20)
+#        assert Game.scoreFinal(Game) == 20
+
+def test_muchos_strikes():
+    Game.roll(Game, 10)
+    Game.roll(Game, 7)
+    Game.roll(Game, 3)
+    Game.muchos_rolls(Game, 1, 10)
+    assert Game.scoreFinal(Game) == 30
 
 #def testPuntajePerfecto():
 #    Game.muchos_rolls(Game, 10, 12)
