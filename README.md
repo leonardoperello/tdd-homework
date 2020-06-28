@@ -15,17 +15,26 @@ code {
 En este caso se está utilizando Pytest por lo que para probar los casos de test
 es necesario instalarlo en caso de no tenerlo ya, con el siguiente comando:
 
-``` pip install -U pytest ```
+```bash
+ pip install -U pytest
+```
 
 Luego para verificar que se instaló correctamente ejecutar
 
-``` pytest --version ```
+```bash
+pytest --version
+```
 
 Para correr el programa se hace de la siguiente manera:
 
-``` pytest test1.py ```
-o 
-```pytest -q test1.py para una ejecución mas detallada. ```
+```bash
+pytest test1.py
+```
+o para una ejecución mas detallada:
+```bash
+pytest -q test1.py 
+```
+ 
 
 ## Ejemplo de un ciclo de TDD (Red/Green/Refactor) para alguna de las funciones implementadas
 .
@@ -36,7 +45,7 @@ o
 .
 .
 .
-### Tipos de Test aplicados y ejemplos (remitirse a la teoría de la materia).
+## Tipos de Test aplicados y ejemplos (remitirse a la teoría de la materia).
 .
 .
 .
