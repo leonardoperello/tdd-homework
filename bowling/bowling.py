@@ -36,6 +36,7 @@ class Game:
     def pinsEnPosicion(self, roll_):
         return self.rolls[roll_]
     
+
     #determina si termino el juego (iniciado, por eso entre el self) o no
     def juegoTerminado(self):
         return((len(self.rolls)==20) | len(self.rolls)==22)
@@ -48,13 +49,12 @@ class Game:
         for i in range(num):
             Game.roll(self, pins)
 
+            
     #determina si termino el juego (iniciado, por eso entre el self) o no
     def juegoTerminado(self):
         return((len(self.rolls)==20) | len(self.rolls)==22)
 
-    #creo que el puntaje perfecto es 300, CREO
-    def puntajePerfecto(self):
-        return(self.current_score==300)
+    def muchos_rolls(self, pins, num):
+        for i in range(num):
+            Game.roll(self, pins)
 
-
-    
