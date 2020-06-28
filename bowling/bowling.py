@@ -10,9 +10,8 @@ class Game:
         self.rolls.append(pins)
 
     def scoreFinal(self):
-        actualRoll = 0
         current_score = 0
-        for x in range(10):
+        for actualRoll in range(10):
             if(Game.strike(self, actualRoll)):
                 current_score += 10 + self.rolls[actualRoll+1] + self.rolls[actualRoll+2]
                 actualRoll += 1
@@ -36,29 +35,11 @@ class Game:
     def pinsEnPosicion(self, roll_):
         return self.rolls[roll_]
     
-<<<<<<< HEAD
     #determina si termino el juego (iniciado, por eso entre el self) o no
     def juegoTerminado(self):
         return((len(self.rolls)==20) | len(self.rolls)==22)
-
 
     def muchos_rolls(self, pins, num):
         for i in range(num):
             Game.roll(self, pins)
 
-=======
->>>>>>> fixPuntajePerfecto
-    #determina si termino el juego (iniciado, por eso entre el self) o no
-    def juegoTerminado(self):
-        return((len(self.rolls)==20) | len(self.rolls)==22)
-
-<<<<<<< HEAD
-    #creo que el puntaje perfecto es 300, CREO
-    def puntajePerfecto(self):
-        return(Game.current_score==300)
-=======
-    def muchos_rolls(self, pins, num):
-        for i in range(num):
-            Game.roll(self, pins)
-
->>>>>>> fixPuntajePerfecto
