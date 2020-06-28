@@ -15,5 +15,5 @@ def testPuntajePerfecto():
 def test_gutter_game():
     Game.muchos_rolls(Game, 0, 20)
     Game.scoreFinal
-    assert Game.current_score == 1 
+    assert Game.current_score == 0 
 
