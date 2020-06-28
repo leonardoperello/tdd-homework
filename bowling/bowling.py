@@ -22,7 +22,6 @@ class Game:
     def pinsEnPosicion(self, roll_):
         return self.rolls[roll_]
     
-   
     def muchos_rolls(self, pins, num):
         for i in range(num):
             Game.roll(self, pins)
