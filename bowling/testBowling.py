@@ -12,11 +12,12 @@ from bowling import Game
 
 def testPuntajePerfecto():
     Game.muchos_rolls(Game, 10, 12)
-    assert (Game.scoreFinal(Game) == 300git )
+    assert (Game.scoreFinal(Game) == 300)
 
 #def test_gutter_game():
 #    Game.muchos_rolls(Game, 0, 20)
 #   assert Game.scoreFinal(Game) == 0 
+
 
 #def testRandom():
 #    for pins in [10, 10, 10, 10, 10, 10, 10, 10,
@@ -24,4 +25,8 @@ def testPuntajePerfecto():
 #            Game.roll(Game,pins)
     #Game.muchos_rolls(Game, 10, 12)
 #    assert Game.scoreFinal(Game) == 300
+
+
+def testPuntajePerfecto():
+    assert (Game.puntajePerfecto(Game)== True)
 
