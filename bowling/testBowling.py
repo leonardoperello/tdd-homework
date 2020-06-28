@@ -28,7 +28,7 @@ def testScore():
 '''
 def testUnos():
         Game.muchos_rolls(Game, 1, 20)
-        assert Game.scoreFinal(Game) == 1
+        assert Game.scoreFinal(Game) == 20
 '''
 def test_muchos_strikes():
     Game.roll(Game, 10)
