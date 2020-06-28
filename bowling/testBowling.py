@@ -35,7 +35,7 @@ def test_muchos_strikes():
     Game.roll(Game, 7)
     Game.roll(Game, 3)
     Game.muchos_rolls(Game, 1, 10)
-    assert Game.scoreFinal(Game) == 30
+    assert Game.scoreFinal(Game) == 49
 
 #def testPuntajePerfecto():
 #    Game.muchos_rolls(Game, 10, 12)
