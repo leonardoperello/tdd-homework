@@ -12,7 +12,7 @@ class Game:
     def scoreFinal(self):
         actualRoll = 0
         current_score = 0
-        for x in range(10):
+        for actualRoll in range(10):
             if(Game.strike(self, actualRoll)):
                 current_score += 10 + self.rolls[actualRoll+1] + self.rolls[actualRoll+2]
                 actualRoll += 1
