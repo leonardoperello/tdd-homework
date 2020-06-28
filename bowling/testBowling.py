@@ -16,7 +16,7 @@ from bowling import Game
 
 def test_gutter_game():
     Game.muchos_rolls(Game, 0, 20)
-    assert Game.scoreFinal(Game) == 0 
+    assert Game.scoreFinal(Game) == 1 
 
 #def testRandom():
 #    for pins in [10, 10, 10, 10, 10, 10, 10, 10,
