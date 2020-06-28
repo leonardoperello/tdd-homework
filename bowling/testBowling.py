@@ -11,6 +11,7 @@ def testStrike():
       assert Game.strike(Game, 0)
 
 def testSpare():
+
    Game.roll(Game, 5)
    Game.roll(Game, 5)
    assert Game.spare(Game, 1) == True
@@ -18,3 +19,11 @@ def testSpare():
 def test_gutter_game():
     Game.muchos_rolls(Game, 0, 20)
     assert Game.pinsEnPosicion(Game, 19) == 1 
+
+    Game.roll(Game, 5)
+    Game.roll(Game, 10)
+    assert Game.spare(Game, 1) == True
+
+def testPuntajePerfecto():
+    assert (Game.puntajePerfecto(Game)== True)
+
