@@ -1,18 +1,19 @@
 from bowling import Game
 
 def testStrike():
-      Game.roll(Game, 10)
-      assert Game.strike(Game, 0)
+    Game.roll(Game, 10)
+    assert Game.strike(Game, 0)
 
 def testSpare():
     Game.roll(Game, 5)
-    Game.roll(Game, 10)
-    assert Game.spare(Game, 1) == True
+    Game.roll(Game, 5)
+    assert Game.spare(Game, 1)
 
 def testPuntajePerfecto():
-    assert (Game.puntajePerfecto(Game)== True)
+    assert (Game.puntajePerfecto(Game) == False)
 
 def test_gutter_game():
     Game.muchos_rolls(Game, 0, 20)
-    assert Game.pinsEnPosicion(Game, 19) == 1 
+    Game.scoreFinal
+    assert Game.current_score == 1 
 

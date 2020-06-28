@@ -9,6 +9,21 @@ class Game:
     def roll(self, pins):
         self.rolls.append(pins)
 
+    def scoreFinal(self):
+        rollsPrincipales = 20
+        actualRoll = 0
+        self.rolls[rollsPrincipales]
+        for x in range(10):
+            if(self.strike(actualRoll)):
+                current_score += 10 + self.rolls[actualRoll+1] + self.rolls[actualRoll+2]
+                actualRoll += 1
+            elif (self.spare(actualRoll)):
+                current_score += 10 + self.rolls[actualRoll+2]
+                actualRoll += 2
+            else:
+                current_score += self.rolls[actualRoll] + self.rolls[actualRoll+1]
+                actualRoll += 2
+
     #metodo spare
     def spare(self, roll_):
         return(self.rolls[roll_] + self.rolls[roll_+1] == self.totalPins)
@@ -25,12 +40,12 @@ class Game:
     def juegoTerminado(self):
         return((len(self.rolls)==20) | len(self.rolls)==22)
 
-    #creo que el puntaje perfecto es 300, CREO
+    #el puntaje perfecto es 300
     def puntajePerfecto(self):
         return(self.current_score==300)
 
     def muchos_rolls(self, pins, num):
         for i in range(num):
-            Game.roll(self, pins)
+            self.roll(Game,pins)
 
     
