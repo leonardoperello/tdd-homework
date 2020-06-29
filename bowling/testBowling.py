@@ -45,7 +45,6 @@ def test_muchos_strikes():
     g.muchos_rolls(1, 17)
     assert g.scoreFinal() == 47
 
-
 def testPuntajePerfecto():
     g = Game([])
     g.muchos_rolls(10, 12)
