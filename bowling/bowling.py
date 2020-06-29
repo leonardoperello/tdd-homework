@@ -13,15 +13,15 @@ class Game:
         current_score = 0
         actualRoll = 0
         for x in range(10):
-            if(Game.strike(self, actualRoll, rolls)):
-                current_score += 10 + rolls[actualRoll+1] + rolls[actualRoll+2]
-                actualRoll += 1
-            elif (Game.spare(self, actualRoll, rolls)):
-                current_score += 10 + rolls[actualRoll+2]
-                actualRoll += 2
-            else:
-                current_score += rolls[actualRoll] + rolls[actualRoll+1]
-                actualRoll += 2
+                if(Game.strike(self, actualRoll, rolls)):
+                    current_score += 10 + rolls[actualRoll+1] + rolls[actualRoll+2]
+                    actualRoll += 1
+                elif (Game.spare(self, actualRoll, rolls)):
+                    current_score += 10 + rolls[actualRoll+2]
+                    actualRoll += 2
+                else:
+                    current_score += rolls[actualRoll] + rolls[actualRoll+1]
+                    actualRoll += 2
         return current_score
 
     #metodo spare
