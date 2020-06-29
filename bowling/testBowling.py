@@ -64,3 +64,5 @@ def testRandom2():
                 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]:
             Game.roll(Game, pins, rolls)
     assert Game.scoreFinal(Game, rolls) == 150
+    assert Game.juegoTerminado
+

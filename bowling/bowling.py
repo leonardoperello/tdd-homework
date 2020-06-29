@@ -38,7 +38,7 @@ class Game:
     
     #determina si termino el juego (iniciado, por eso entre el self) o no
     def juegoTerminado(self):
-        return((len(self.rolls)==20) | len(self.rolls)==22)
+        return((len(self.rolls)==20) | len(self.rolls)==21)
 
     def muchos_rolls(self, pins, num, rolls):
         for i in range(num):
