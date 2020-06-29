@@ -1,68 +1,68 @@
 from bowling import Game
 
 def testSpare():
-   rolls = []
-   Game.roll(Game, 5, rolls)
-   Game.roll(Game, 5, rolls)
-   assert Game.spare(Game, 0, rolls)
+   g = Game([]) 
+   g.roll(5)
+   g.roll(5)
+   assert g.spare(0)
 
 def testSpare2():
-   rolls = []
-   Game.roll(Game, 2, rolls)
-   Game.roll(Game, 8, rolls)
-   assert Game.spare(Game, 0, rolls)
+   g = Game([])
+   g.roll(2)
+   g.roll(8)
+   assert g.spare(0)
 
 def testStrike():
-    rolls = []
-    Game.roll(Game, 10, rolls)
-    assert Game.strike(Game, 0, rolls)
+    g = Game([])
+    g.roll(10)
+    assert g.strike(0)
 
 def test_gutter_game():
-    rolls = []
-    Game.muchos_rolls(Game, 0, 20, rolls)
-    assert Game.scoreFinal(Game, rolls) == 0 
+    g = Game([])
+    g.muchos_rolls(0, 20)
+    assert g.scoreFinal() == 0 
 
 def testPosicion():
-    rolls = []
-    Game.roll(Game, 10, rolls)
-    assert Game.pinsEnPosicion(Game, 0, rolls)
+    g = Game([])
+    g.roll(10)
+    assert g.pinsEnPosicion(0) == 10
 
 def testScore():
-    rolls = []
-    Game.muchos_rolls(Game, 6, 20, rolls)
-    assert (Game.scoreFinal(Game, rolls)==120)
+    g = Game([])
+    g.muchos_rolls(6, 20)
+    assert (g.scoreFinal()==120)
 
 def testUnos():
-        rolls = []
-        Game.muchos_rolls(Game, 1, 20, rolls)
-        assert Game.scoreFinal(Game, rolls) == 20
+    g = Game([])
+    g.muchos_rolls(1, 20)
+    assert g.scoreFinal() == 20
 
 def test_muchos_strikes():
-    rolls = []
-    Game.roll(Game, 10, rolls)
-    Game.roll(Game, 7, rolls)
-    Game.roll(Game, 3, rolls)
-    Game.muchos_rolls(Game, 1, 17, rolls)
-    assert Game.scoreFinal(Game, rolls) == 47
+    g = Game([])
+    g.roll(10)
+    g.roll(7)
+    g.roll(3)
+    g.muchos_rolls(1, 17)
+    assert g.scoreFinal() == 47
 
 
 def testPuntajePerfecto():
-    rolls = []
-    Game.muchos_rolls(Game, 10, 12, rolls)
-    assert (Game.scoreFinal(Game, rolls)==300)
+    g = Game([])
+    g.muchos_rolls(10, 12)
+    assert (g.scoreFinal()==300)
 
 def testRandom():
-    rolls = []
+    g = Game([])
     for pins in [1, 5, 7, 2, 9, 0, 8, 1,
                      10, 3, 2, 5, 3, 4, 1, 1, 1, 1, 1]:
-            Game.roll(Game, pins, rolls)
-    assert Game.scoreFinal(Game, rolls) == 70
+            g.roll(pins)
+    assert g.scoreFinal() == 70
     
 def testRandom2():
-    rolls = []
+    g = Game([])
     for pins in [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 
                 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 ]:
-            Game.roll(Game, pins, rolls)
-    assert Game.scoreFinal(Game, rolls) == 150
-    assert Game.juegoTerminado
+            g.roll(pins)
+    assert g.scoreFinal() == 150
+    assert g.juegoTerminado
 
