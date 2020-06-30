@@ -82,7 +82,7 @@ El error que se obtuvo proviene de la mala implementación del método strike el
 ```python
 
 def strike(self, roll_):
-        if(self.rolls[roll_] == 10):
+        if(self.rolls[roll_] == 9):
             return True
      
 
