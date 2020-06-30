@@ -44,6 +44,11 @@ def testStrike():
       g=Game([])
       g.roll(10)
       assert g.strike(0)
+
+```
+En la siguiente imágen se muestra el error en el código por el cual no pasó el test
+![REDStrike-TDD](Screenshots/red%20strike%202.png)
+
 ```  
 En este caso, nos encontramos en la primer fase del ciclo ya que al ejecutar este test, obtuvimos un error.  
 En la siguiente imágen se muestra el error en el código por el cual no pasó el test  
@@ -69,7 +74,7 @@ def strike():
       return (self.rolls[roll_]==10)
 ```
 A su vez, verificamos que este refactor pasara el test:
-![RefactorStrike-TDD]Screenshots/refactor%20strike.png
+![RefactorStrike-TDD](Screenshots/refactor%20strike.png)
 .
 .
 .
