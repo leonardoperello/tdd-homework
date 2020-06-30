@@ -8,7 +8,7 @@ es necesario instalarlo en caso de no tenerlo ya, con el siguiente comando:
  pip install -U pytest
 ```
 
-Luego para verificar que se instaló correctamente ejecutar
+Luego para verificar que se instaló correctamente ejecutar el siguiente comando:
 
 ```bash
 pytest --version
@@ -17,11 +17,11 @@ pytest --version
 Para correr el programa se hace de la siguiente manera:
 
 ```bash
-pytest test1.py
+pytest testBowling.py
 ```
 o para una ejecución mas detallada:
 ```bash
-pytest -q test1.py 
+pytest -q testBowling.py 
 ```
  
 
@@ -116,7 +116,18 @@ A su vez, verificamos que este refactor pasara el test:
 Después de continuar los tests, tratamos de obtener un coverage de un 100% pero obtuvimos un 97%:
 
 ![coverage-TDD](ImagenesFinales/coverageCortado.png)
-.
+
+Lo que se hizo ejecutando la siguiente línea:
+
+```bash
+coverage run -m pytest testBowling.py
+```
+En el caso de querer obtener más información con un reporte, ejecutar la siguiente línea:
+
+```bash
+coverage report -m
+```
+
 ## Tipos de Test aplicados y ejemplos (remitirse a la teoría de la materia).
 .
 .
@@ -128,5 +139,6 @@ Después de continuar los tests, tratamos de obtener un coverage de un 100% pero
 ## Conclusiones:
 ### Dificultades y ventajas percibidas en cuanto a la metodología TDD y al proyecto en sí, críticas constructivas
 <ul>
-  <p>A la hora de realizar este trabajo se hizo uso de Github para poder tener un mejor control de versiones a medida que íbamos programando. Esto fue un desafío para nosotros ya que estábamos más acostumbrados a usar entornos como Gitkraken por lo que a la hora de usar los comandos en la terminal pudimos ver un cambio. Además, pudimos ver cómo crear ramas hacía el trabajo más ordenado ya que ninguno de los dos estaba acostumbrado a hacer esto. En cuanto a las dificultades presentadas con esta metodología, se tuvo un par de problemas a la hora de hacer los pull request que hicimos rápidamente y sin observar que se los realizamos a la rama del profesor.</p>  
-  <p>Por otro lado, como adoptamos la metodología de pair programming (mediante videollamadas compartiendo pantalla), pudimos aprovechar los conocimientos de cada uno sobre un lenguaje en el cual ninguno tiene mucha experiencia y fuimos llevando a cabo ciclos de TDD.  En cuanto a la metodología TDD, no encontramos dificultades e incluso consideramos que fue muy útil en nuestro caso dados nuestros conocimientos sobre el lenguaje.</p>
+  <p>A la hora de realizar este trabajo se hizo uso de Github para poder tener un mejor control de versiones a medida que íbamos programando. Esto fue un desafío para nosotros ya que estábamos más acostumbrados a usar entornos como GitKraken por lo que a la hora de usar los comandos en la terminal pudimos ver qué estábamos haciendo en cada paso, porque teníamos que ejecutar un comando para cada cosa. Además, pudimos ver cómo crear ramas hacía el trabajo más ordenado ya que ninguno de los dos estaba acostumbrado a hacer esto. En cuanto a las dificultades presentadas con esta metodología, se tuvo un par de problemas a la hora de hacer los pull request que hicimos rápidamente y sin observar que se los realizamos a la rama del profesor.</p>
+<p>Por otro lado, como adoptamos la metodología de pair programming (mediante videollamadas compartiendo pantalla), pudimos aprovechar los conocimientos de cada uno sobre un lenguaje en el cual ninguno tiene mucha experiencia y fuimos llevando a cabo ciclos de TDD.  En cuanto a la metodología TDD, las dificultades fueron que en varias ocasiones tuvimos que volver todo hacia atrás al darnos cuenta de que estábamos modificando en la rama master en vez de en una nueva rama, o que estábamos realizando cambios en otros métodos que no correspondian a la funcionalidad que queríamos crear en esa rama. Pero fuera de eso, consideramos que fue muy útil realizar TDD porque de esa manera nos comenzamos a acostumbrar a ser más ordenados a la hora de programar una nueva funcionalidad o hacer refactor en otras. Además, comenzar por los test nos ayudó a determinar más fácilmente cuál era la funcionalidad que esperábamos que hiciera nuestro código. 
+</p>
