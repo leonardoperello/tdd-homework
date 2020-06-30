@@ -27,7 +27,7 @@ pytest -q testBowling.py
 
 ## Ejemplo de un ciclo de TDD (Red/Green/Refactor) para alguna de las funciones implementadas
 
-### ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) RED ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+)
+### ![#f03c15](https://via.placeholder.com/180x15/f03c15/000000?text=+) RED ![#f03c15](https://via.placeholder.com/180x15/f03c15/000000?text=+)
 Una de las funciones implementadas que cumplían con el ciclo de TDD fue la llamada Strike que verificaba si la jugada representaba o no un strike.
 ```python
 def testStrike():
@@ -98,7 +98,7 @@ def strike(self, roll_):
      
 
 ```
-### ![#00b347](https://via.placeholder.com/15/00b347/000000?text=+) GREEN ![#00b347](https://via.placeholder.com/15/00b347/000000?text=+)
+### ![#00b347](https://via.placeholder.com/180x15/00b347/000000?text=+) GREEN ![#00b347](https://via.placeholder.com/180x15/00b347/000000?text=+)
 Una vez se vuelven a ejecutar el pytest y en este caso los test pasaron por lo que ahora se avanza a GREEN:
 
  
@@ -113,7 +113,7 @@ def strike():
 ```
 A su vez, verificamos que este refactor pasara el test:
 ![RefactorStrike-TDD](ImagenesFinales/refactor-strikeFinal.png)
-### ![#cb51ff](https://via.placeholder.com/15/cb51ff/000000?text=+) REFACTOR ![#cb51ff](https://via.placeholder.com/15/cb51ff/000000?text=+)
+### ![#cb51ff](https://via.placeholder.com/180x15/cb51ff/000000?text=+) REFACTOR ![#cb51ff](https://via.placeholder.com/180x15/cb51ff/000000?text=+)
 Después de continuar los tests, tratamos de obtener un coverage de un 100% pero obtuvimos un 97%:
 
 ![coverage-TDD](ImagenesFinales/coverageCortadob.png)
