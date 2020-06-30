@@ -128,14 +128,10 @@ En el caso de querer obtener más información con un reporte, ejecutar la sigui
 coverage report -m
 ```
 
-## Tipos de Test aplicados y ejemplos (remitirse a la teoría de la materia).
-.
-.
-.
-.
-.
-.
-.
+## Tipos de Test aplicados y ejemplos (remitirse a la teoría de la materia).  
+
+<p>A medida que se fueron implementando nuevas funcionalidades para nuestro juego, primero se diseñaba el test de dicho método, por lo que para cubrir todas las posibilidades, en muchos casos, alcanzó con crear un solo test. En el caso de método más extensos, como por ejemplo scoreFinal, se realizaron más casos de tests para cubrir las posibilidades que se crearon debido al bucle, que además indirectamente volvía a testear los método spare y strike porque en scoreFinal se hacía uso de ellos. En otras palabras, lo que se hizo después de cada cambio, fuese en los test o en los métodos del juego, es volver a correr todos los tests para verificar que ese cambio no hubiera afectado a algunas de las funcionalidades ya creadas. </p>  
+
 ## Conclusiones:
 ### Dificultades y ventajas percibidas en cuanto a la metodología TDD y al proyecto en sí, críticas constructivas
 <ul>
