@@ -104,6 +104,8 @@ Una vez se vuelven a ejecutar el pytest y en este caso los test pasaron por lo q
  
 ![GREENStrike-TDD](ImagenesFinales/green-strikeFinal.png)
 
+### ![#cb51ff](https://via.placeholder.com/180x15/cb51ff/000000?text=+) REFACTOR ![#cb51ff](https://via.placeholder.com/180x15/cb51ff/000000?text=+)  
+
 
 Luego se percibió que éste código se podía mejorar por lo que se realizó el siguiente refactor:
 
@@ -112,8 +114,13 @@ def strike():
       return (self.rolls[roll_]==10)
 ```
 A su vez, verificamos que este refactor pasara el test:
-![RefactorStrike-TDD](ImagenesFinales/refactor-strikeFinal.png)
-### ![#cb51ff](https://via.placeholder.com/180x15/cb51ff/000000?text=+) REFACTOR ![#cb51ff](https://via.placeholder.com/180x15/cb51ff/000000?text=+)
+![RefactorStrike-TDD](ImagenesFinales/refactor-strikeFinal.png)  
+
+Y paso!!! :sunglasses:
+*************************************************************************************************************
+
+### Coverage
+
 Después de continuar los tests, tratamos de obtener un coverage de un 100% pero obtuvimos un 97%:
 
 ![coverage-TDD](ImagenesFinales/coverageCortadob.png)
@@ -129,7 +136,7 @@ En el caso de querer obtener más información con un reporte, ejecutar la sigui
 coverage report -m
 ```
 
-## Tipos de Test aplicados y ejemplos (remitirse a la teoría de la materia).  
+## Tipos de Test aplicados y ejemplos. 
 
 <p>A medida que se fueron implementando nuevas funcionalidades para nuestro juego, primero se diseñaba el test de dicho método, por lo que para cubrir todas las posibilidades, en muchos casos, alcanzó con crear un solo test. En el caso de método más extensos, como por ejemplo scoreFinal, se realizaron más casos de tests para cubrir las posibilidades que se crearon debido al bucle, que además indirectamente volvía a testear los método spare y strike porque en scoreFinal se hacía uso de ellos. En otras palabras, lo que se hizo después de cada cambio, fuese en los test o en los métodos del juego, es volver a correr todos los tests para verificar que ese cambio no hubiera afectado a algunas de las funcionalidades ya creadas. </p>  
 
