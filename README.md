@@ -27,7 +27,7 @@ pytest -q test1.py
 
 ## Ejemplo de un ciclo de TDD (Red/Green/Refactor) para alguna de las funciones implementadas
 .
-Una de las funciones implementadas que cumplían con el ciclo de TDD fue la siguiente
+Una de las funciones implementadas que cumplían con el ciclo de TDD fue la llamada Strike que verificaba si la jugada representaba o no un strike.
 ```python
 def testStrike():
       g=Game([])
@@ -35,39 +35,87 @@ def testStrike():
       assert g.strike(0)
 
 ```
-En la siguiente imágen se muestra el error en el código por el cual no pasó el test
-![REDStrike-TDD](Screenshots/red%20strike%202.png)
+En la siguiente imágen se muestra el error en el código por el cual no pasó el test por primera vez:
 
-```  
-En este caso, nos encontramos en la primer fase del ciclo ya que al ejecutar este test, obtuvimos un error.  
-En la siguiente imágen se muestra el error en el código por el cual no pasó el test  
+![REDStrike1-TDD](ImagenesFinales/red-strike1.png)  
 
-![REDStrike-TDD]Screenshots/red%20strike2.png  
-
-Esto se debió a que en la función roll se pedían dos parametros pero se le dió uno solo.
-Dado que el error en el código se presentaba en la funcionalidad roll, lo corregimos de esta forma:
-
+En este caso, se observa que el error se encuentra en la línea g.roll(0) y se comprueba que el código de la función roll estaba mal implementado al faltarle el atributo pins como parámetro:
 ```python
+
 def roll(self):
         self.rolls.append(pins)
-        
-        
-def strike():
-      if(self.rolls[roll_])==10):
-            return True
+     
+
+``` 
+Se procede a corregir dicho error y la función roll quedó de la siguiente manera:
+
+```python
+
+def roll(self, pins):
+        self.rolls.append(pins)
+     
+
 ```
-Luego vimos que éste código se podía mejorar por lo que le hicimos el siguiente refactor:
+Luego de esto, se vuelve a ejecutar el comando para volver a ejecutar el test:
+
+```bash
+pytest testBowling.py
+```
+En esta ocasión, el test vuelve a fallar debido a un error en el assert como muestra la siguiente imágen:
+
+![REDStrike1-TDD](ImagenesFinales/red-strike2.png) 
+
+La causa de este error fue que en testStrike se estaba accediendo al primer roll, el de la posición 0, cuando debía ser la posición 1. Luego, procedemos a arreglar dicho error:
+```python
+def testStrike():
+    g = Game([])
+    g.roll(0)
+    g.roll(10)
+    assert g.strike(1)
+```
+Nuevamente volvemos a ejecutar pytest para verificar si pasan los test y éstos volvieron a fallar:  
+
+![REDStrike1-TDD](ImagenesFinales/red-strike3.png) 
+
+El error que se obtuvo proviene de la mala implementación del método strike el cual era el siguiente:
+
+```python
+
+def strike(self, roll_):
+        if(self.rolls[roll_] == 10):
+            return True
+     
+
+```
+Como se puede ver, el número de pins debía ser 10, no 9. Por lo tanto se procede a arreglar este error:
+
+```python
+
+def strike(self, roll_):
+        if(self.rolls[roll_] == 10):
+            return True
+     
+
+```
+
+Una vez se vuelven a ejecutar el pytest y en este caso los test pasaron por lo que ahora se avanza a GREEN:
+
+ 
+![GREENStrike-TDD](ImagenesFinales/green-strikeFinal.png)
+
+
+Luego se percibió que éste código se podía mejorar por lo que se realizó el siguiente refactor:
 
 ```python
 def strike():
       return (self.rolls[roll_]==10)
 ```
 A su vez, verificamos que este refactor pasara el test:
-![RefactorStrike-TDD](Screenshots/refactor%20strike.png)
-.
-.
-.
-.
+![RefactorStrike-TDD](ImagenesFinales/refactor-strikeFinal.png)
+
+Después de continuar los tests, tratamos de obtener un coverage de un 100% pero obtuvimos un 97%:
+
+![coverage-TDD](ImagenesFinales/coverageCortado.png)
 .
 ## Tipos de Test aplicados y ejemplos (remitirse a la teoría de la materia).
 .
