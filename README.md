@@ -40,7 +40,7 @@ En la siguiente imágen se muestra el error en el código por el cual no pasó e
 
 ![REDStrike1-TDD](ImagenesFinales/red-strike1.png)  
 
-En este caso, se observa que el error se encuentra en la línea ```python g.roll(0) ``` y se comprueba que el código de la función ```python roll ``` estaba mal implementado al faltarle el atributo pins como parámetro:  
+En este caso, se observa que el error se encuentra en la línea ``` g.roll(0) ``` y se comprueba que el código de la función ``` roll ``` estaba mal implementado al faltarle el atributo pins como parámetro:  
 
 ```python
 
