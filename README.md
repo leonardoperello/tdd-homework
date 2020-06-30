@@ -1,14 +1,3 @@
-# Trabajo Practico Obligatorio: Test Driven Development (TDD)
-<style>
-code {
-  font-family: Consolas,"courier new";
-  color: #f1f1f1;
-  background-color: #000000;
-  padding: 2px;
-  font-size: 105%;
-}
-</style>
-
 
 ## Instrucciones para correr el proyecto.
 
