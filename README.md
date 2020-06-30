@@ -38,23 +38,26 @@ pytest -q test1.py
 
 ## Ejemplo de un ciclo de TDD (Red/Green/Refactor) para alguna de las funciones implementadas
 .
-```python
-def testStrike():
-  Game.roll(Game,5)
-  assert Game.strike(Game, 0)==10
-  assert 5==10
-```
+Una de las funciones implementadas que cumplían con el ciclo de TDD fue la siguiente
 ```python
 def testStrike():
       g=Game([])
       g.roll(10)
       assert g.strike(0)
-```
-En la siguiente imágen se muestra el error en el código por el cual no pasó el test
-![REDStrike-TDD]Screenshots/red%20strike2.png
+```  
+En este caso, nos encontramos en la primer fase del ciclo ya que al ejecutar este test, obtuvimos un error.  
+En la siguiente imágen se muestra el error en el código por el cual no pasó el test  
 
-El error en el código se presentaba en la funcionalidad strike. Lo corregimos de esta forma:
+![REDStrike-TDD]Screenshots/red%20strike2.png  
+
+Esto se debió a que en la función roll se pedían dos parametros pero se le dió uno solo.
+Dado que el error en el código se presentaba en la funcionalidad roll, lo corregimos de esta forma:
+
 ```python
+def roll(self):
+        self.rolls.append(pins)
+        
+        
 def strike():
       if(self.rolls[roll_])==10):
             return True
