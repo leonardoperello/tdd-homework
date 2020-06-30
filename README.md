@@ -44,7 +44,29 @@ def testStrike():
   assert Game.strike(Game, 0)==10
   assert 5==10
 ```
-.
+```python
+def testStrike():
+      g=Game([])
+      g.roll(10)
+      assert g.strike(0)
+```
+En la siguiente imágen se muestra el error en el código por el cual no pasó el test
+![REDStrike-TDD]Screenshots/red%20strike2.png
+
+El error en el código se presentaba en la funcionalidad strike. Lo corregimos de esta forma:
+```python
+def strike():
+      if(self.rolls[roll_])==10):
+            return True
+```
+Luego vimos que éste código se podía mejorar por lo que le hicimos el siguiente refactor:
+
+```python
+def strike():
+      return (self.rolls[roll_]==10)
+```
+A su vez, verificamos que este refactor pasara el test:
+![RefactorStrike-TDD]Screenshots/refactor%20strike.png
 .
 .
 .
