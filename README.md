@@ -26,7 +26,7 @@ pytest -q testBowling.py
  
 
 ## Ejemplo de un ciclo de TDD (Red/Green/Refactor) para alguna de las funciones implementadas
-.
+
 Una de las funciones implementadas que cumplían con el ciclo de TDD fue la llamada Strike que verificaba si la jugada representaba o no un strike.
 ```python
 def testStrike():
@@ -56,7 +56,7 @@ def roll(self, pins):
      
 
 ```
-Luego de esto, se vuelve a ejecutar el comando para volver a ejecutar el test:
+Luego de esto, se vuelve a ejecutar el comando para volver a correr el test:
 
 ```bash
 pytest testBowling.py
