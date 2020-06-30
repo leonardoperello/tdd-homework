@@ -51,7 +51,7 @@ def testStrike():
       assert g.strike(0)
 ```
 En la siguiente imágen se muestra el error en el código por el cual no pasó el test
-![REDStrike-TDD]Screenshots/red%20strike2.png
+![REDStrike-TDD](Screenshots/red%20strike%202.png)
 
 El error en el código se presentaba en la funcionalidad strike. Lo corregimos de esta forma:
 ```python
@@ -66,7 +66,7 @@ def strike():
       return (self.rolls[roll_]==10)
 ```
 A su vez, verificamos que este refactor pasara el test:
-![RefactorStrike-TDD]Screenshots/refactor%20strike.png
+![RefactorStrike-TDD](Screenshots/refactor%20strike.png)
 .
 .
 .
