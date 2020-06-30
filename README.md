@@ -115,7 +115,7 @@ A su vez, verificamos que este refactor pasara el test:
 
 Después de continuar los tests, tratamos de obtener un coverage de un 100% pero obtuvimos un 97%:
 
-![coverage-TDD](ImagenesFinales/coverageCortado.png)
+![coverage-TDD](ImagenesFinales/coverageCortadob.png)
 
 Lo que se hizo ejecutando la siguiente línea:
 
